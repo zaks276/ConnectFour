@@ -152,43 +152,6 @@
         }
       },
       {
-        "HashCode": 1991647992,
-        "Kind": "Components.Component",
-        "Name": "ConnectFour.App",
-        "AssemblyName": "ConnectFour",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "App"
-          }
-        ],
-        "Metadata": {
-          "Common.TypeName": "ConnectFour.App",
-          "Common.TypeNameIdentifier": "App",
-          "Common.TypeNamespace": "ConnectFour",
-          "Runtime.Name": "Components.IComponent"
-        }
-      },
-      {
-        "HashCode": 1069576492,
-        "Kind": "Components.Component",
-        "Name": "ConnectFour.App",
-        "AssemblyName": "ConnectFour",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "ConnectFour.App"
-          }
-        ],
-        "Metadata": {
-          "Common.TypeName": "ConnectFour.App",
-          "Common.TypeNameIdentifier": "App",
-          "Common.TypeNamespace": "ConnectFour",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
-          "Runtime.Name": "Components.IComponent"
-        }
-      },
-      {
         "HashCode": 1423389232,
         "Kind": "Components.Component",
         "Name": "ConnectFour.Pages.Index",
@@ -221,6 +184,43 @@
           "Common.TypeName": "ConnectFour.Pages.Index",
           "Common.TypeNameIdentifier": "Index",
           "Common.TypeNamespace": "ConnectFour.Pages",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": 1991647992,
+        "Kind": "Components.Component",
+        "Name": "ConnectFour.App",
+        "AssemblyName": "ConnectFour",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "App"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "ConnectFour.App",
+          "Common.TypeNameIdentifier": "App",
+          "Common.TypeNamespace": "ConnectFour",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": 1069576492,
+        "Kind": "Components.Component",
+        "Name": "ConnectFour.App",
+        "AssemblyName": "ConnectFour",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ConnectFour.App"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "ConnectFour.App",
+          "Common.TypeNameIdentifier": "App",
+          "Common.TypeNamespace": "ConnectFour",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch",
           "Runtime.Name": "Components.IComponent"
         }
