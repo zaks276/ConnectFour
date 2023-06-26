@@ -1,0 +1,181 @@
+﻿@inject ConnectFour.Shared.GameState State;
+@using System.Drawing;
+@inject IJSRuntime _jsRuntime;
+
+<HeadContent>
+    <style>
+        :root{
+            --board-bg: black;
+            --player1: blue;
+            --player2: red;
+        }
+    </style>
+</HeadContent>
+
+<article class="message-container">
+    @WinnerMessage <button style="@ResetStyle" @onclick="ResetGame">Reset the game</button>
+    <br/>
+    <span class="alert-danger">@ErrorMessage</span>
+    <span class="alert-info">@CurrentTurn</span>
+</article>
+
+<nav>
+    @if(Column1Full)
+    {
+        <span title="Column 1 is full">🟥</span>
+    } else 
+    {
+        <span title="Click to play a piece" @onclick="() => PlayPiece(0)">🔽</span>
+    }
+
+    @if(Column2Full)
+    {
+        <span title="Column 2 is full">🟥</span>
+    } else 
+    {
+        <span title="Click to play a piece" @onclick="() => PlayPiece(1)">🔽</span>
+    }
+
+    @if (Column3Full)
+    {
+        <span title="Column 3 is full">🟥</span>
+    } else 
+    {
+        <span title="Click to play a piece" @onclick="() => PlayPiece(2)">🔽</span>
+    }
+
+    @if (Column4Full)
+    {
+        <span title="Column 4 is full">🟥</span>
+    } else 
+    {
+        <span title="Click to play a piece" @onclick="() => PlayPiece(3)">🔽</span>
+    }
+
+    @if (Column5Full)
+    {
+        <span title="Column 5 is full">🟥</span>
+    } else 
+    {
+        <span title="Click to play a piece" @onclick="() => PlayPiece(4)">🔽</span>
+    }
+
+    @if (Column6Full)
+    {
+        <span title="Column 6 is full">🟥</span>
+    } else 
+    {
+        <span title="Click to play a piece" @onclick="() => PlayPiece(5)">🔽</span>
+    }
+
+    @if (Column7Full)
+    {
+        <span title="Column 7 is full">🟥</span>
+    } else
+    {
+        <span title="Click to play a piece" @onclick="() => PlayPiece(6)">🔽</span>
+    }
+</nav>
+
+<div>
+
+	<div class="board">
+
+        @for (var i = 0; i < 42; i++)
+		{
+			<span class="container"><span></span></span>
+		}
+
+	</div>
+
+	@for (var i = 0; i < 42; i++)
+	{
+		<span class="@Pieces[i]"></span>
+	}
+
+</div>
+
+@code {
+        private string[] Pieces = new string[42];
+
+        private string WinnerMessage = string.Empty;
+
+        private string ErrorMessage = string.Empty;
+
+        private string CurrentTurn => (WinnerMessage == string.Empty) ? $"Player {State.PlayerTurn}'s Turn" : "";
+
+        private string ResetStyle => (WinnerMessage == string.Empty) ? "display: none;" : "";
+
+        private string SoundSrc = "/audio/sound.mp3";
+
+        private bool Column1Full, Column2Full, Column3Full, Column4Full, Column5Full, Column6Full, Column7Full = false;
+
+        private async void PlayPiece(byte col)
+        {
+            try
+            {
+                var landingRow = State.PlayPiece(col);
+                var cssClass = $"player{State.PlayerTurn} col{col + 1} drop{landingRow}";
+                Pieces[State.CurrentTurn - 1] = cssClass;
+                await _jsRuntime.InvokeVoidAsync("PlayAudio", SoundSrc);
+            }
+            catch(ArgumentException ex)
+            {
+                ErrorMessage = ex.Message;
+                CheckColumnFullMessage(ErrorMessage);
+            }
+
+            WinnerMessage = State.CheckForWin() switch
+            {
+                GameState.WinState.Player1_Wins => "Player 1 Wins!",
+                GameState.WinState.Player2_Wins => "Player 2 Wins!",
+                GameState.WinState.Tie => "It's a tie!",
+                _ => ""
+            };
+            
+        }
+
+        void CheckColumnFullMessage(string Error)
+        {
+            switch (Error)
+            {   
+                case "Column 1 is full":
+                    Column1Full = true;
+                    break;
+                case "Column 2 is full":
+                    Column2Full = true;
+                    break;
+                case "Column 3 is full":
+                    Column3Full = true;
+                    break;
+                case "Column 4 is full":
+                    Column4Full = true;
+                    break;
+                case "Column 5 is full":
+                    Column5Full = true;
+                    break;
+                case "Column 6 is full":
+                    Column6Full = true;
+                    break;
+                case "Column 7 is full":
+                    Column7Full = true;
+                    break;
+            }
+        }
+
+        void ResetGame()
+        {
+            State.ResetBoard();
+            ErrorMessage = string.Empty;
+            WinnerMessage = string.Empty;
+            Pieces = new string[42];
+            Column1Full = Column2Full = Column3Full = Column4Full = Column5Full = Column6Full = Column7Full = false;
+        }
+
+        protected override void OnInitialized()
+        {
+            State.ResetBoard();
+        }
+
+}
+
