@@ -9,6 +9,43 @@
   "ProjectWorkspaceState": {
     "TagHelpers": [
       {
+        "HashCode": -969734609,
+        "Kind": "Components.Component",
+        "Name": "ConnectFour.Shared.Board",
+        "AssemblyName": "ConnectFour",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Board"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "ConnectFour.Shared.Board",
+          "Common.TypeNameIdentifier": "Board",
+          "Common.TypeNamespace": "ConnectFour.Shared",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": 1678893645,
+        "Kind": "Components.Component",
+        "Name": "ConnectFour.Shared.Board",
+        "AssemblyName": "ConnectFour",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ConnectFour.Shared.Board"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "ConnectFour.Shared.Board",
+          "Common.TypeNameIdentifier": "Board",
+          "Common.TypeNamespace": "ConnectFour.Shared",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
         "HashCode": -2137308290,
         "Kind": "Components.Component",
         "Name": "ConnectFour.Shared.MainLayout",
@@ -112,43 +149,6 @@
           "Components.IsSpecialKind": "Components.ChildContent",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch",
           "Runtime.Name": "Components.None"
-        }
-      },
-      {
-        "HashCode": -969734609,
-        "Kind": "Components.Component",
-        "Name": "ConnectFour.Shared.Board",
-        "AssemblyName": "ConnectFour",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Board"
-          }
-        ],
-        "Metadata": {
-          "Common.TypeName": "ConnectFour.Shared.Board",
-          "Common.TypeNameIdentifier": "Board",
-          "Common.TypeNamespace": "ConnectFour.Shared",
-          "Runtime.Name": "Components.IComponent"
-        }
-      },
-      {
-        "HashCode": 1678893645,
-        "Kind": "Components.Component",
-        "Name": "ConnectFour.Shared.Board",
-        "AssemblyName": "ConnectFour",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "ConnectFour.Shared.Board"
-          }
-        ],
-        "Metadata": {
-          "Common.TypeName": "ConnectFour.Shared.Board",
-          "Common.TypeNameIdentifier": "Board",
-          "Common.TypeNamespace": "ConnectFour.Shared",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
-          "Runtime.Name": "Components.IComponent"
         }
       },
       {
