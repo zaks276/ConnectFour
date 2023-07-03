@@ -7,7 +7,7 @@ nav {
     width: 30em;
     display: inline-flex;
     flex-direction: row;
-    margin-left: 10px;
+    margin-left: 0.5em;
 }
 
 nav span {
@@ -295,5 +295,190 @@ span.container {
 
     99% {
         transform: translateY(20.4em);
+    }
+}
+
+@media screen and (max-width: 560px), screen and (max-height: 560px) {
+    nav {
+        width: 22.6em;
+        margin-left: 4.2em;
+    }
+
+    div.board {
+        transform: scale(0.8);
+        margin-left: 1em;
+        margin-top: 0;
+    }
+
+    .container span {
+        transform: scale(0.91);
+    }
+
+    span.container {
+        transform: scale(1.05);
+    }
+
+    .player1,
+    .player2 {
+        width: 2.3em;
+        height: 2.3em;
+    }
+
+    .message-container {
+        margin-right: 0.5em;
+    }
+
+    .col1 {
+        left: calc(0em + 76px);
+    }
+
+    .col2 {
+        left: calc(3.2em + 76px);
+    }
+
+    .col3 {
+        left: calc(6.4em + 76px);
+    }
+
+    .col4 {
+        left: calc(9.6em + 76px);
+    }
+
+    .col5 {
+        left: calc(12.8em + 76px);
+    }
+
+    .col6 {
+        left: calc(16em + 76px);
+    }
+
+    .col7 {
+        left: calc(19.2em + 76px);
+    }
+
+    @keyframes drop1 {
+        75%,
+        90%,
+        97%,
+        100% {
+            transform: translateY(2.9em);
+        }
+
+        80% {
+            transform: translateY(2.03em);
+        }
+
+        95% {
+            transform: translateY(2.43em);
+        }
+
+        99% {
+            transform: translateY(2.63em);
+        }
+    }
+
+    @keyframes drop2 {
+        75%,
+        90%,
+        97%,
+        100% {
+            transform: translateY(6.1em);
+        }
+
+        80% {
+            transform: translateY(4.63em);
+        }
+
+        95% {
+            transform: translateY(5.43em);
+        }
+
+        99% {
+            transform: translateY(5.73em);
+        }
+    }
+
+    @keyframes drop3 {
+        75%,
+        90%,
+        97%,
+        100% {
+            transform: translateY(9.3em);
+        }
+
+        80% {
+            transform: translateY(7.23em);
+        }
+
+        95% {
+            transform: translateY(8.33em);
+        }
+
+        99% {
+            transform: translateY(8.83em);
+        }
+    }
+
+    @keyframes drop4 {
+        75%,
+        90%,
+        97%,
+        100% {
+            transform: translateY(12.5em);
+        }
+
+        80% {
+            transform: translateY(9.83em);
+        }
+
+        95% {
+            transform: translateY(11.23em);
+        }
+
+        99% {
+            transform: translateY(11.93em);
+        }
+    }
+
+    @keyframes drop5 {
+        75%,
+        90%,
+        97%,
+        100% {
+            transform: translateY(15.7em);
+        }
+
+        80% {
+            transform: translateY(12.43em);
+        }
+
+        95% {
+            transform: translateY(14.13em);
+        }
+
+        99% {
+            transform: translateY(14.93em);
+        }
+    }
+
+    @keyframes drop6 {
+        75%,
+        90%,
+        97%,
+        100% {
+            transform: translateY(18.9em);
+        }
+
+        80% {
+            transform: translateY(15.03em);
+        }
+
+        95% {
+            transform: translateY(17.03em);
+        }
+
+        99% {
+            transform: translateY(18.3em);
+        }
     }
 }

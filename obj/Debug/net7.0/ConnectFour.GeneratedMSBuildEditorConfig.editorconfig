@@ -9,29 +9,29 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = browser
 build_property.RootNamespace = ConnectFour
 build_property.RootNamespace = ConnectFour
-build_property.ProjectDir = C:\Users\user\Desktop\ConnectFour\
+build_property.ProjectDir = C:\Users\user\Desktop\MZ\Projects\ConnectFour\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\user\Desktop\ConnectFour
+build_property.MSBuildProjectDirectory = C:\Users\user\Desktop\MZ\Projects\ConnectFour
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/user/Desktop/ConnectFour/App.razor]
+[C:/Users/user/Desktop/MZ/Projects/ConnectFour/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/ConnectFour/Pages/Index.razor]
+[C:/Users/user/Desktop/MZ/Projects/ConnectFour/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/ConnectFour/_Imports.razor]
+[C:/Users/user/Desktop/MZ/Projects/ConnectFour/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/ConnectFour/Shared/Board.razor]
+[C:/Users/user/Desktop/MZ/Projects/ConnectFour/Shared/Board.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEJvYXJkLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-ygt4w3xcny
 
-[C:/Users/user/Desktop/ConnectFour/Shared/MainLayout.razor]
+[C:/Users/user/Desktop/MZ/Projects/ConnectFour/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-6iaftcaddt
